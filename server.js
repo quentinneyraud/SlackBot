@@ -1,5 +1,5 @@
 'use strict';
-
+require('./setenv.js');
 // node modules
 var http = require('http');
 
