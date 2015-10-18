@@ -1,0 +1,28 @@
+{
+  "name": "SlackBot",
+  "version": "1.0.0",
+  "description": "Slack bot",
+  "author": {
+    "name": "Quentin Neyraud",
+    "email": "quentin.neyraud@gmail.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/openshift/origin-server"
+  },
+  "engines": {
+    "node": ">= 0.6.0",
+    "npm": ">= 1.0.0"
+  },
+  "dependencies": {
+    "fs": "0.0.2",
+    "mongoose": "^4.1.8",
+    "request": "^2.65.0",
+    "slackbots": "^0.4.0",
+    "util": "^0.10.3"
+  },
+  "devDependencies": {},
+  "bundleDependencies": [],
+  "private": true,
+  "main": "server.js"
+}
