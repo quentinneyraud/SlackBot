@@ -31,7 +31,6 @@ meteoRequest.prototype._respondMeteo = function(){
     }else{
         var mainMatin = (typeof traductions[this.weatherData[0].weather[0].description] != 'undefined') ? traductions[this.weatherData[0].weather[0].description] : this.weatherData[0].weather[0].description;
         var tMatin = Math.ceil(this.weatherData[0].main.temp);
-        console.log(this.weatherData[1].weather[0].description);
         var mainAprem = (typeof traductions[this.weatherData[1].weather[0].description] != 'undefined') ? traductions[this.weatherData[1].weather[0].description] : this.weatherData[1].weather[0].description;
         var tAprem = Math.ceil(this.weatherData[1].main.temp);
         this.misterBot._respond("*Voici la météo " + this.requestedPeriodString + "* :\n_Matin_ :\n>• " + mainMatin + "\n>• Température : " + tMatin + "°\n_Aprem_ :\n>• " + mainAprem + "\n>• Température : " + tAprem + "°\n\n");
