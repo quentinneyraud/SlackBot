@@ -12,9 +12,9 @@ var config = [
         description : "Retourne le mail de la personne"
     },
     {
-        requestTitle : "meteoRequest",
-        regex : /meteo (du \d{2}\/\d{2}|de (demain|la semaine)|d'aujourd'hui)$/,
-        stringCatch : "meteo de < aujourd'hui / demain / date >",
+        requestTitle : "weatherRequest",
+        regex : /meteo (du \d{2}\/\d{2}|du \d{2}\/\d{2}\/\d{4}|de demain|d'aujourd'hui)$/,
+        stringCatch : "meteo < d'aujourd'hui / de demain / du jj/mm / du jj/mm/yyyy >",
         description : "Retourne la météo du jour demandé"
     }
 ]
