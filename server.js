@@ -1,5 +1,7 @@
 'use strict';
-require('./setenv.js');
+if(typeof process.env.OPENSHIFT_NODEJS_IP == 'undefined'){
+    require('./setenv.js');
+}
 // node modules
 var http = require('http');
 
