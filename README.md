@@ -29,12 +29,12 @@ Developed in NodeJs as clean as possible =)
 ##Process
 
 ###*server.js*
-Run this file create new server and instanciate new `misterBot` object and call `run()` function on it
+Run this file create new server and instanciate new `misterBot` object and call `run()` on it
 
 ###*misterBot.js*
 This 'class' extends [slackbots](http://www.npmjs.com/package/slackbots) node module which have useful properties
 
-- `Run()` function connect the bot to Slack
+- `Run()` connect the bot to Slack
 
 On `start` event, it call :
 
@@ -54,8 +54,8 @@ So it check if it's :
 
 If one condition is false, it don't do anything. Else, let's continue...
 
-It call `_getRequestType()`which look over `requestsConfig` property, array of objects like
-```json
+It call `_getRequestType()`which look over `requestsConfig` property (= `server.js`), array of objects like
+```
     {
         requestTitle : "weatherRequest",
         regex : /regex/,
@@ -64,7 +64,7 @@ It call `_getRequestType()`which look over `requestsConfig` property, array of o
     }
 ```
 If the text of the message match the regex, it call `new weatherRequest()`where it executes specific actions. 
-The bot reply with `_answer()` function which answer where it was called. 
+The bot reply with `_answer()` which answer where it was called. 
 
 
 ##Actions
@@ -87,7 +87,7 @@ Misterbot answer weather infos
 Replace every "*requestTitle*" whith yours
 
  1. Add config in *config.js*
-```json
+```
     {
         requestTitle : requestTitle,
         regex : regex to capture action,
@@ -118,6 +118,7 @@ Create Model/*modelName* Model.js
 - [Openshift : Develop, host and scale your apps in the cloud](http://www.openshift.com)
 - [Slack : formatting your messages](http://slack.zendesk.com/hc/en-us/articles/202288908-How-can-I-add-formatting-to-my-messages-)
 - [Scotch.io : Mongoose tutorial](https://scotch.io/tutorials/using-mongoosejs-in-node-js-and-mongodb-applications)
+
 ####Nodemon
 Run 
 ```
