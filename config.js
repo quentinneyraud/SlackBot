@@ -2,7 +2,7 @@ var config = [
     {
         requestTitle : "contactRequest",
         regex : /numero de \w+$/,
-        stringCatch : "numero de < Prenom >",
+        stringCatch : "(numero|numéro) de < Prenom >",
         description : "Retourne le numero de la personne"
     },
     {
