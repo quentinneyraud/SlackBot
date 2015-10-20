@@ -41,7 +41,8 @@ weatherRequest.prototype._answerWeather = function(){
         var main = this._getTranslation(this.weatherApiDatas.weather[0].description);
         var tMin = this.weatherApiDatas.main.temp_min;
         var tMax = this.weatherApiDatas.main.temp_max;
-        this.misterBot.answer("*Voici la météo d'aujourd'hui* :\n>• " + main + "\n>• Température allant de " + tMin + "° à " + tMax + "°\n\nBonne journée !");
+        var tString = (tMin == tMax) ? ">• Température : " + tMax + "°" : ">• Température allant de " + tMin + "° à " + tMax + "°";
+        this.misterBot.answer("*Voici la météo d'aujourd'hui* :\n>• " + main + "\n" + tString + "\n\nBonne journée !");
     }else{
         var mainMorning = this._getTranslation(this.weatherApiDatas[0].weather[0].description);
         var tMorning = Math.ceil(this.weatherApiDatas[0].main.temp);
