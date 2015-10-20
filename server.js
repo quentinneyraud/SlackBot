@@ -18,7 +18,7 @@ var botApiToken = process.env.BOT_API_TOKEN;
 // config vars
 var ip =  process.env.OPENSHIFT_NODEJS_IP || "127.0.0.1";
 var port =  process.env.OPENSHIFT_NODEJS_PORT || 8080;
-var dbPath = process.env.OPENSHIFT_MONGODB_DB_URL || 'mongodb://localhost/slackbot';
+var dbPath = process.env.OPENSHIFT_MONGODB_DB_URL + process.env.OPENSHIFT_APP_NAME || 'mongodb://localhost/slackbot';
 
 // start server
 var server = http.createServer(function(request, response) {});
