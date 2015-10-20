@@ -10,6 +10,7 @@ var weatherRequest = function Constructor(misterBot){
         "few clouds" : "Quelques nuages",
         "scattered clouds" : "Nuages dispersés",
         "broken clouds" : "Nuages dispersés",
+        "overcast clouds" : "Ciel couvert",
         "light rain" : "Pluie",
         "shower rain" : "Averse",
         "Rain" : "Pluie",
