@@ -40,13 +40,13 @@ weatherRequest.prototype._answerWeather = function(){
         var main = this._getTranslation(this.weatherApiDatas.weather[0].description);
         var tMin = this.weatherApiDatas.main.temp_min;
         var tMax = this.weatherApiDatas.main.temp_max;
-        this.misterBot._answer("*Voici la météo d'aujourd'hui* :\n>• " + main + "\n>• Température allant de " + tMin + "° à " + tMax + "°\n\nBonne journée !");
+        this.misterBot.answer("*Voici la météo d'aujourd'hui* :\n>• " + main + "\n>• Température allant de " + tMin + "° à " + tMax + "°\n\nBonne journée !");
     }else{
         var mainMorning = this._getTranslation(this.weatherApiDatas[0].weather[0].description);
         var tMorning = Math.ceil(this.weatherApiDatas[0].main.temp);
         var mainAfternoon = this._getTranslation(this.weatherApiDatas[1].weather[0].description);
         var tAfternoon = Math.ceil(this.weatherApiDatas[1].main.temp);
-        this.misterBot._answer("*Voici la météo " + this.requestedPeriod.string + "* :\n_Matin_ :\n>• " + mainMorning + "\n>• Température : " + tMorning + "°\n_Aprem_ :\n>• " + mainAfternoon + "\n>• Température : " + tAfternoon + "°\n\n");
+        this.misterBot.answer("*Voici la météo " + this.requestedPeriod.string + "* :\n_Matin_ :\n>• " + mainMorning + "\n>• Température : " + tMorning + "°\n_Aprem_ :\n>• " + mainAfternoon + "\n>• Température : " + tAfternoon + "°\n\n");
     }
 }
 
@@ -72,12 +72,12 @@ weatherRequest.prototype._getDataFromApi = function(cb){
             }
 
             if(self.weatherApiDatas.length == 0){
-                self.misterBot._answer("Désolé, Je n'ai rien trouvé pour ce jour");
+                self.misterBot.answer("Désolé, Je n'ai rien trouvé pour ce jour");
             }else{
                 self._answerWeather();
             }
         }else{
-            self.misterBot._answer("Oups, une erreur est survenue quand j'ai essayé de récupérer la météo");
+            self.misterBot.answer("Oups, une erreur est survenue quand j'ai essayé de récupérer la météo");
         }
     })
 }
